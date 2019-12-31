@@ -2,7 +2,7 @@
 # Set your DHCP server by full FQDN name
 Get-DhcpServerv4Scope -ComputerName FullFQDN.Of.YourDHCPServer | Get-DhcpServerv4Lease -ComputerName FullFQDN.Of.YourDHCPServer | select Hostname, ClientId, IPAddress, LeaseExpiryTime | Export-csv -path "C:\exportdir\psdhcpleases.csv"
 
-# Set your information here, table must be dbo.tablename
+# Set your database information here, table must be dbo.tablename
 # The server can be referenced by just the name instead of the full FQDN
 $database = 'DatabaseName'
 $server = 'DatabaseServerName'
