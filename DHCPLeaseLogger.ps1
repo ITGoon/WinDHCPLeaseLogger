@@ -1,5 +1,5 @@
 # This first section exports a CSV of your DHCP leases
-# Add your DHCP server by name
+# Set your DHCP server by full FQDN name
 Get-DhcpServerv4Scope -ComputerName FullFQDN.Of.YourDHCPServer | Get-DhcpServerv4Lease -ComputerName FullFQDN.Of.YourDHCPServer | select Hostname, ClientId, IPAddress, LeaseExpiryTime | Export-csv -path "C:\exportdir\psdhcpleases.csv"
 
 # Set your information here, table must be dbo.tablename
